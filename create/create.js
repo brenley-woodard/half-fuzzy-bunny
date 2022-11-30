@@ -5,7 +5,7 @@ const logoutButton = document.getElementById('logout');
 
 form.addEventListener('submit', async (e) => {
     // prevent default
-
+    
     // get the name and family id from the form
 
     // use createBunny to create a bunny with this name and family id
@@ -15,6 +15,7 @@ form.addEventListener('submit', async (e) => {
 
 window.addEventListener('load', async () => {
     // let's dynamically fill in the families dropdown from supabase
+    const select = document.
     // grab the select HTML element from the DOM
     // go get the families from supabase
     // for each family

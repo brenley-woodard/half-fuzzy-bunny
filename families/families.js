@@ -9,10 +9,23 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-function displayFamilies() {
+function displayFamilies(families) {
     // fetch families from supabase
     // clear out the familiesEl
+    familiesEl.textContent = '';
     // loop through each family and for each family:
+    for (let family of families) {
+        const familyEl = document.createElement('div');
+        const nameEl = document.createElement('h3');
+        // const bunniesEl = document.createElement('div');
+        familyEl.classList.add('family');
+
+        nameEl.textContent = family.name;
+
+        familyEl.append(nameEl);
+        familiesEl.append(familyEl);
+    }
+
     // create three elements for each family, one for the whole family, one to hold the name, and one to hold the bunnies
     // your HTML Element should look like this:
     // <div class="family">
