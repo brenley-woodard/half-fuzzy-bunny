@@ -15,6 +15,7 @@ form.addEventListener('submit', async (e) => {
     await createBunny({ name: name, family_id: familyId });
 
     form.reset();
+    location.replace('/');
 });
 
 window.addEventListener('load', async () => {
